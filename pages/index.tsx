@@ -17,13 +17,13 @@ const HomePage: NextPage = () => {
       <main
         className={`${montserrat.className} h-screen text-white`}
       >
-        <header className='absolute flex w-full justify-between p-8'>
-          <div className='text-5xl font-bold uppercase'>vz</div>
+        <header className='absolute flex w-full justify-between p-10'>
+          <div className='text-5xl font-bold uppercase text-brand-gray'>vz</div>
           <MenuBarIcon />
         </header>
         <aside className='absolute flex h-screen w-full items-center justify-between p-8'>
           <div className=''>01</div>
-          <nav className='flex flex-col gap-4 '>
+          <nav className='flex flex-col gap-10 '>
             <MailIcon />
             <LinkedinIcon />
             <MailIcon />
@@ -40,8 +40,8 @@ const HomePage: NextPage = () => {
         <section className='container mx-auto flex h-screen items-center justify-center'>
           <div>
             <h1 className='text-7xl font-bold uppercase tracking-[.35em]'>Vanzer</h1>
-            <h2 className='my-4 text-xl uppercase'>Free creative psd template for you</h2>
-            <span className='mb-4 mt-8 block h-1 w-1/3 bg-orange-600' />
+            <h2 className='my-4 text-xl uppercase text-brand-gray'>Free creative psd template for you</h2>
+            <span className='mb-7 mt-10 block h-[3px] w-2/5 bg-orange-600' />
             <div>
               <p className='text-sm font-bold uppercase'>Read More <span>▶️</span></p>
             </div>
