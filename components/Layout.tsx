@@ -37,29 +37,31 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       <main
         className={`${lato.variable} ${montserrat.variable} h-screen ${dark ? 'text-brand-darkGray' : 'text-white'}`}
       >
-        <header className='absolute flex w-full justify-between px-10 pt-10'>
+        <header className='absolute z-10 flex w-full justify-between px-10 pt-10'>
           <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
-          <MenuBarIcon />
+          <Link href='/'>
+            <MenuBarIcon />
+          </Link>
         </header>
-        <aside className='absolute -z-20 flex h-screen w-full items-center justify-between p-8 font-montserrat'>
-          <div className='flex flex-col items-center gap-7 font-bold'>
+        <nav className='absolute flex h-screen items-center p-8 font-montserrat'>
+          <div className='flex flex-col items-center gap-y-7 font-bold'>
             <p className='text-6xl'>01</p>
             <div className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}><p className='ml-8'>HOME</p></div>
-            <div className={ `h-24 w-[3px] ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}/>
-            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} `}/>
-            <div className='flex h-3 w-3 items-center rounded-lg bg-brand-gray'><p className='ml-8 hidden'>ABOUT</p></div>
-            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} `}/>
-            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'}`}/>
+            <div className={`h-24 w-[3px] ${dark ? 'bg-brand-darkGray' : 'bg-white'}`} />
+            <Link href='/about' className='flex h-3 w-3 items-center rounded-lg bg-brand-gray'><p className='ml-8 hidden'>ABOUT</p></Link>
+            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} `} />
+            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} `} />
+            <div className={`h-3 w-3 rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'}`} />
           </div>
-          <nav className='hidden flex-col gap-10 xl:flex'>
-            <a href='github.com' target='_blank'>
-              <GithubIcon />
-            </a>
-            <MailIcon />
-            <WhatsappIcon/>
-            <LinkedinIcon />
-          </nav>
-        </aside>
+        </nav>
+        <nav className='absolute right-8 h-screen flex-col items-center justify-center gap-10 xl:flex'>
+          <a href='github.com' target='_blank'>
+            <GithubIcon />
+          </a>
+          <MailIcon />
+          <WhatsappIcon />
+          <LinkedinIcon />
+        </nav>
         {children}
       </main>
 
