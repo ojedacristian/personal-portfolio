@@ -9,8 +9,13 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          gray: '#b3b3b3'
+          gray: '#b3b3b3',
+          orange: '#ff4200'
         }
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        lato: ['var(--font-lato)']
       }
     },
   },
