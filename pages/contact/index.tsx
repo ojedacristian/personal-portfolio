@@ -16,7 +16,7 @@ const ContactPage: NextPage = () => {
                         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-[0.2em]'>
                             Contact
                         </h1>
-                        <div className='flex flex-col items-end gap-14 pt-24 text-brand-gray'>
+                        <div className='flex flex-col items-end gap-14 fill-brand-gray pt-24 text-brand-gray'>
                             <div className='flex items-center gap-7 font-lato'>
                                 <div>
                                     <span className='block font-montserrat text-lg font-bold uppercase'>E-mail</span>
