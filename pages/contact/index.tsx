@@ -9,10 +9,10 @@ const ContactPage: NextPage = () => {
             <div className='absolute -z-40 h-screen w-1/2 bg-brand-darkGray opacity-90 ' />
             <div className='absolute right-0 -z-40 h-screen w-1/2 bg-[#efefef] opacity-90 ' />
 
-            <div className='h-screen'>
+            <div className='flex min-h-screen items-center justify-center'>
 
-                <div className='container mx-auto flex justify-center gap-20 p-48'>
-                    <div className='w-1/2 text-right'>
+                <div className='container flex justify-center gap-20 lg:border lg:border-red-500 xl:p-48'>
+                    <div className='flex-1 text-right'>
                         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-[0.2em]'>
                             Contact
                         </h1>
@@ -38,11 +38,10 @@ const ContactPage: NextPage = () => {
                                 </div>
                                 <LinkedinIcon />
                             </div>
-
                         </div>
                     </div>
-                    <div className='w-1/2 text-black'>
-                        <form className='flex flex-col gap-8 px-12 font-lato text-brand-darkGray [&>div>input]:font-montserrat [&>div>textarea]:font-montserrat'>
+                    <div className='flex-1 text-black'>
+                        <form className='flex flex-col gap-8 font-lato text-brand-darkGray [&>div>input]:font-montserrat [&>div>textarea]:font-montserrat'>
                             <div>
                                 <label htmlFor="name" className='block font-bold uppercase'>Name</label>
                                 <input type="text" placeholder='Your name' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400  focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange' />
