@@ -7,7 +7,7 @@ const PortfolioPage: NextPage = () => {
     <Layout>
       {/* BG */}
       {/* <div className=" absolute -z-30 h-screen w-full bg-[url('/homebg.jpg')] bg-cover bg-no-repeat opacity-100 grayscale " /> */}
-      <div className="h-full w-full bg-[url('/square2.svg')] opacity-100">
+      <div className="flex h-full w-full items-center justify-end bg-[url('/square2.svg')] opacity-100 md:justify-center">
 
       {/* <div className='absolute -left-44 -top-0 -z-40 h-screen overflow-hidden font-montserrat text-[1000px] font-bold  leading-none text-brand-gray opacity-30'>
           P
@@ -19,10 +19,11 @@ const PortfolioPage: NextPage = () => {
       </div> */}
       {/* <div className='absolute -z-20 h-screen w-full bg-brand-darkGray opacity-90' /> */}
       {/* BG END */}
-      <div className='container mx-auto px-72 py-48'>
+
+      <div className='container border border-red-400 p-24 pr-4 lg:p-32 xl:p-48'>
         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-widest'>Portfolio</h1>
 
-        <div className='mx-auto'>
+        <div className='mx-auto grid lg:grid-cols-2'>
           <figure className="group relative m-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
             <img src="1.jpg" alt="img01" className='min-h-full min-w-full group-hover:opacity-60' />
             <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100
@@ -35,7 +36,6 @@ const PortfolioPage: NextPage = () => {
                 <ArrowRight/>
                 </div>
               </div>
-            {/* <a href="/func" className='absolute bottom-0 right-0 z-10 h-full p-4'>View more</a> */}
             </figcaption>
               <p className='invisible absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-6 font-lato font-bold  opacity-0 transition-all duration-500 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>Descripcion del proyecto de Urkupiña</p>
               <h2 className='absolute bottom-0 left-0 p-4 text-base font-bold uppercase transition-all group-hover:text-brand-darkGray'>
