@@ -4,15 +4,15 @@ import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
 
 const ContactPage: NextPage = () => {
   return (
-        <Layout>
-            <div className="absolute -z-50 h-screen w-1/2 bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat grayscale" />
-            <div className='absolute -z-40 h-screen w-1/2 bg-brand-darkGray opacity-90 ' />
-            <div className='absolute right-0 -z-40 h-screen w-1/2 bg-[#efefef] opacity-90 ' />
+        <Layout bg="bg-[#efefef]">
+            <div className="absolute left-0 top-0 h-screen w-1/2 bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat" />
+            {/* <div className='absolute -z-40 h-screen w-1/2 bg-brand-darkGray opacity-90 ' /> */}
+            {/* <div className='absolute right-0 -z-40 h-screen w-1/2 bg-[#efefef] opacity-90 ' /> */}
 
-            <div className='flex min-h-screen items-center justify-center'>
+            <div className='flex items-center justify-center'>
 
-                <div className='container flex justify-center gap-20 lg:border lg:border-red-500 xl:p-48'>
-                    <div className='flex-1 text-right'>
+                <div className='container mr-20 flex justify-center gap-20 lg:border lg:border-red-500 xl:p-48'>
+                    <div className='relative z-10 flex-1 text-right'>
                         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-[0.2em]'>
                             Contact
                         </h1>
