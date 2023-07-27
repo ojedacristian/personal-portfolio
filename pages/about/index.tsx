@@ -10,7 +10,7 @@ const AboutPage: NextPage = () => {
       <div className='absolute right-0 top-16 -z-50 h-1/2 overflow-hidden font-montserrat text-[250px] font-bold  leading-none tracking-widest text-brand-lightGray opacity-20'>
         AB
       </div>
-      <div className='flex h-screen flex-col items-center justify-around'>
+      <div className='flex flex-col items-center justify-around'>
         <div></div>
         <h1 className='text-center font-montserrat text-6xl font-bold uppercase tracking-[0.2em] md:text-7xl'>
           <span className='text-brand-orange'>Creative </span>Studio
