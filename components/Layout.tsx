@@ -10,6 +10,7 @@ interface Props {
   title?: string
   dark?: boolean
   children: React.ReactNode
+  bg?: string
 }
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -24,7 +25,7 @@ const lato = Lato({
 })
 // const origin = (typeof window === 'undefined') ? '' : window.location.origin
 
-export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Portfolio', dark = false }: Props) => {
+export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Portfolio', dark = false, bg = '' }: Props) => {
   return (
     <>
       <Head>
@@ -38,14 +39,16 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       </Head>
 
       <main
-        className={`${lato.variable} ${montserrat.variable} min-h-screen ${dark ? 'text-brand-darkGray' : 'text-white'}`}
+        className={`${lato.variable} ${montserrat.variable} relative h-screen ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex flex-col`}
       >
-        <header className='absolute z-10 flex w-full justify-between px-10 pt-10'>
+        <header className='flex w-full justify-between px-10 pt-10'>
           <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
         </header>
-        <NavbarMenu dark={dark}/>
-        <NavbarSocial/>
-        {children}
+        <div className='flex h-full justify-between gap-8 px-8'>
+          <NavbarMenu dark={dark}/>
+          {children}
+          <NavbarSocial/>
+        </div>
       </main>
 
     </>

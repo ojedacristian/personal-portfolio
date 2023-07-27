@@ -4,18 +4,19 @@ import { Layout } from '@/components/Layout'
 
 const HomePage: NextPage = () => {
   return (
-    <Layout>
+    <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat" >
       {/* BACKGROUND */}
-      <div className='absolute -z-40 h-screen w-full bg-[#333] opacity-90' />
-      <div className="absolute -z-50 h-screen w-full bg-[url('/homebg.jpg')] bg-cover bg-no-repeat grayscale" />
-      <div className='absolute -z-30 flex h-screen w-full items-center justify-center overflow-hidden pl-96 pr-32 font-bold leading-[0]' id='mask'>
+      {/* <div className='absolute -z-40 h-screen w-full bg-[#333] opacity-90' /> */}
+      {/* <div className="absolute -z-50 h-screen w-full bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat" /> */}
+
+      <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden font-bold leading-[0]' id='mask'>
         <h1 className='font-montserrat text-[900px]'>V</h1>
       </div>
-      <div className='absolute -z-20 flex h-screen w-full items-center justify-center overflow-hidden pl-96 pr-32 text-[900px] font-bold leading-[0] text-brand-orange opacity-50'>
+      <div className='absolute left-2/3 top-1/2 z-20 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[900px] font-bold leading-[0] text-brand-orange opacity-50'>
         <h1 className='font-montserrat'>V</h1>
       </div>
       {/* BACKGROUND END */}
-      <section className='container mx-auto flex h-screen items-center justify-center'>
+      <section className='container relative z-30 flex items-center justify-center'>
         <div className='mr-60'>
           <h1 className='font-montserrat text-7xl font-bold uppercase tracking-[.35em]'>Vanzer</h1>
           <h2 className='my-4 font-lato text-xl font-bold uppercase tracking-[0.15em] text-brand-gray'>Free creative psd template for you</h2>

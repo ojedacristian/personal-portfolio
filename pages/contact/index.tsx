@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
 const ContactPage: NextPage = () => {
   return (
         <Layout>
-            <div className="absolute -z-50 h-screen w-1/2 bg-[url('/homebg.jpg')] bg-cover bg-no-repeat grayscale" />
+            <div className="absolute -z-50 h-screen w-1/2 bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat grayscale" />
             <div className='absolute -z-40 h-screen w-1/2 bg-brand-darkGray opacity-90 ' />
             <div className='absolute right-0 -z-40 h-screen w-1/2 bg-[#efefef] opacity-90 ' />
 

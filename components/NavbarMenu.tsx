@@ -41,7 +41,7 @@ export const NavbarMenu: React.FC<Props> = ({ dark }) => {
   const pathname = usePathname()
 
   return (
-    <nav className='absolute flex h-screen items-center p-8 font-montserrat'>
+    <nav className='flex items-center font-montserrat'>
           <div className='flex flex-col items-center gap-y-7 font-bold'>
             {
               links.map(link => {
