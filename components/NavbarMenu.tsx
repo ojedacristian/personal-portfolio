@@ -49,14 +49,15 @@ export const NavbarMenu: React.FC<Props> = ({ dark }) => {
                   return (
                     <>
                       <p key={link.id} className='text-6xl'>0{link.id}</p>
-                      <div className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}><p className='ml-8 uppercase'>{link.label}</p></div>
+                      <div className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}>
+                        <p className='ml-8 uppercase'>{link.label}</p></div>
                       <div className={`h-24 w-[3px] ${dark ? 'bg-brand-darkGray' : 'bg-white'}`} />
                     </>
                   )
                 } else {
                   return (
-                    <Link key={link.id} href={link.path} className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} `}>
-                      <p className='ml-8 hidden'>{ link.label}</p>
+                    <Link key={link.id} href={link.path} className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-lightGray' : 'bg-brand-gray'} group hover:bg-brand-orange`}>
+                      <p className='ml-8 hidden text-sm uppercase text-brand-gray group-hover:block'>{ link.label}</p>
                       </Link>
                   )
                 }
