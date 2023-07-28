@@ -2,7 +2,7 @@ import { MailIcon, GithubIcon, LinkedinIcon } from './icons'
 
 const NavbarSocial: React.FC = () => {
   return (
-        <nav className='hidden flex-col items-center justify-center gap-10 lg:flex'>
+        <nav className='hidden h-screen w-20 flex-col items-center justify-center gap-10 lg:flex'>
             <a href='mailto:cristianojeda.maimo@gmail.com' className='text-brand-gray transition ease-in-out hover:scale-150 hover:text-brand-orange'>
                 <MailIcon />
             </a>

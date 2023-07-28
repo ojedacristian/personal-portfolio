@@ -39,16 +39,18 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       </Head>
 
       <main
-        className={`${lato.variable} ${montserrat.variable} relative ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex flex-col`}
+        className={`${lato.variable} ${montserrat.variable} relative overflow-hidden ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex min-h-screen justify-between`}
       >
-        <header className='relative z-10 flex w-full justify-between px-10 pt-10'>
-          <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
-        </header>
+        <aside className='flex h-screen flex-col items-center'>
+          <header className='relative z-10 flex px-10 pt-10'>
+            <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
+          </header>
+          <NavbarMenu dark={dark} />
+        </aside>
         <div className='flex h-full justify-between gap-20 px-8'>
-          <NavbarMenu dark={dark}/>
           {children}
-          <NavbarSocial/>
         </div>
+        <NavbarSocial />
       </main>
 
     </>
