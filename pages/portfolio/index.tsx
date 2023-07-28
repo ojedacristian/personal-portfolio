@@ -20,10 +20,10 @@ const PortfolioPage: NextPage = () => {
       {/* <div className='absolute -z-20 h-screen w-full bg-brand-darkGray opacity-90' /> */}
       {/* BG END */}
 
-      <div className='container border border-red-400 p-24 pr-4 lg:p-32 xl:p-48'>
+      <div className='container m-4 p-12 lg:px-12 xl:px-16'>
         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-widest'>Portfolio</h1>
 
-        <div className='mx-auto grid lg:grid-cols-2'>
+        <div className='grid lg:grid-cols-2 2xl:grid-cols-3'>
           <figure className="group relative m-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
             <img src="1.jpg" alt="img01" className='min-h-full min-w-full group-hover:opacity-60' />
             <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100

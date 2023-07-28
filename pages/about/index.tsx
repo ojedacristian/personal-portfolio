@@ -3,7 +3,7 @@ import { type NextPage } from 'next'
 
 const AboutPage: NextPage = () => {
   return (
-    <Layout dark>
+    <Layout dark bg='h-screen'>
       <div className='absolute -left-44 -z-50 h-screen overflow-hidden font-montserrat text-[800px] font-bold leading-none text-brand-lightGray opacity-30 md:-top-0 md:text-[1000px]'>
         A
       </div>

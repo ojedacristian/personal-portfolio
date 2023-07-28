@@ -39,7 +39,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       </Head>
 
       <main
-        className={`${lato.variable} ${montserrat.variable} relative h-screen ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex flex-col`}
+        className={`${lato.variable} ${montserrat.variable} relative ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex flex-col`}
       >
         <header className='relative z-10 flex w-full justify-between px-10 pt-10'>
           <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
