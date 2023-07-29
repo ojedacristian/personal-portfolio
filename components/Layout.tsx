@@ -47,7 +47,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
           </header>
           <NavbarMenu dark={dark} />
         </aside>
-        <div className='flex h-full justify-between gap-20 px-8'>
+        <div className='flex h-full px-8'>
           {children}
         </div>
         <NavbarSocial />
