@@ -4,7 +4,7 @@ import { Layout } from '@/components/Layout'
 
 const HomePage: NextPage = () => {
   return (
-    <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen" >
+    <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen overflow-hidden" >
       {/* BACKGROUND */}
       <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden font-bold leading-[0]' id='mask'>
         <h1 className='font-montserrat text-[900px]'>V</h1>

@@ -6,7 +6,7 @@ const AboutPage: NextPage = () => {
     <Layout dark>
       <section
       className='container flex min-h-screen flex-col items-center justify-around pt-20'>
-        <h1 className='text-center font-montserrat text-6xl font-bold uppercase tracking-widest md:text-7xl md:tracking-[0.2em]'>
+        <h1 className='text-center font-montserrat text-5xl font-bold uppercase tracking-widest sm:text-6xl md:text-7xl md:tracking-[0.2em]'>
           <span className='text-brand-orange'>Creative </span>Studio
         </h1>
         <div className='w-full px-4 md:w-3/4 xl:w-1/2'>

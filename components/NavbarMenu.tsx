@@ -48,7 +48,7 @@ export const NavbarMenu: React.FC<Props> = ({ dark }) => {
                 if (pathname === link.path) {
                   return (
                     <>
-                      <p key={link.id} className='text-6xl'>0{link.id}</p>
+                      <p key={link.id} className='text-4xl sm:text-6xl'>0{link.id}</p>
                       <div className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}>
                         <p className='ml-8 uppercase'>{link.label}</p></div>
                       <div className={`h-24 w-[3px] ${dark ? 'bg-brand-darkGray' : 'bg-white'}`} />
@@ -65,6 +65,6 @@ export const NavbarMenu: React.FC<Props> = ({ dark }) => {
               )
             }
           </div>
-        </nav>
+    </nav>
   )
 }

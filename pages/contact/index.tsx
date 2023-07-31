@@ -4,8 +4,8 @@ import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
 
 const ContactPage: NextPage = () => {
   return (
-        <Layout bg="bg-[#efefef] h-screen">
-            <div className="absolute left-0 top-0 h-screen w-full bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat lg:w-1/2" />
+        <Layout bg="bg-[#efefef] min-h-screen">
+            <div className="absolute inset-y-0 left-0 min-h-screen w-full bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat lg:w-1/2" />
 
             <div className='container flex flex-col pt-20 lg:pr-16'>
                 <div className='relative z-10 mx-auto flex text-right lg:mx-0 lg:pr-12'>
@@ -41,7 +41,7 @@ const ContactPage: NextPage = () => {
                         </div>
                     </div>
                     <div className='relative z-10 flex-1 text-black'>
-                        <form className='flex flex-col gap-8 font-lato text-brand-lightGray lg:text-brand-darkGray
+                        <form className='flex flex-col gap-8 pb-4 font-lato text-brand-lightGray lg:text-brand-darkGray
                         [&>div>input]:font-montserrat [&>div>input]:text-brand-darkGray
                          [&>div>textarea]:font-montserrat [&>div>textarea]:text-brand-darkGray'>
                             <div>

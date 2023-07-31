@@ -1,6 +1,6 @@
 'use client'
 import Head from 'next/head'
-import { GithubIcon, LinkedinIcon, MailIcon } from './icons'
+import { GithubIcon, LinkedinIcon, MailIcon, MenuBarIcon } from './icons'
 import { Montserrat, Lato } from 'next/font/google'
 import Link from 'next/link'
 import { NavbarMenu } from './NavbarMenu'
@@ -39,15 +39,15 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       </Head>
 
       <main
-        className={`${lato.variable} ${montserrat.variable} relative overflow-hidden ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex min-h-screen justify-between`}
+        className={`${lato.variable} ${montserrat.variable} relative ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex min-h-screen justify-between`}
       >
-        <aside className='flex h-screen flex-col items-center'>
-          <header className='relative z-10 flex px-10 pt-10'>
+        <aside className='hidden h-screen flex-col items-center pl-2 sm:flex sm:pl-0'>
+          <header className='relative z-10 flex w-full justify-between pt-10 sm:px-10'>
             <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
           </header>
           <NavbarMenu dark={dark} />
         </aside>
-        <div className='mx-auto flex h-full px-8'>
+        <div className='mx-auto flex h-full px-2 sm:px-8'>
           {children}
         </div>
         <NavbarSocial />
