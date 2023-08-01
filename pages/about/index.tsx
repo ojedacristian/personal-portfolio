@@ -15,7 +15,7 @@ const AboutPage: NextPage = () => {
         </div>
       </section>
       {/* BACKGROUND */}
-      <div className='absolute -left-44 -z-50 h-screen overflow-hidden font-montserrat text-[800px] font-bold leading-none text-brand-lightGray opacity-30 md:-top-0 md:text-[1000px]'>
+      <div className='absolute -left-44 -z-50 h-screen overflow-hidden font-montserrat font-bold leading-none text-brand-lightGray opacity-30 sm:text-[800px] md:-top-0 md:text-[1000px]'>
         A
       </div>
       <div className='absolute right-0 top-16 -z-50 h-1/2 overflow-hidden font-montserrat text-[250px] font-bold  leading-none tracking-widest text-brand-lightGray opacity-20'>
