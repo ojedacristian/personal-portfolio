@@ -9,7 +9,7 @@ interface LinksNav {
   id: string
 }
 
-const links: LinksNav[] = [
+export const links: LinksNav[] = [
   {
     label: 'Home',
     path: '/',
