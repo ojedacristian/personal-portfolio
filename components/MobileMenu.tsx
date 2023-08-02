@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { MenuBarIcon } from './icons'
 import { links } from './NavbarMenu'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { ToggleButton } from './ToggleButton'
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at calc(100% - 36px) 36px)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -14,9 +14,9 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: 'circle(80px at 40px 40px)',
+    clipPath: 'circle(24px at calc(100% - 36px) 36px )',
     transition: {
-      delay: 0.5,
+      delay: 0.0,
       type: 'spring',
       stiffness: 400,
       damping: 40
@@ -28,34 +28,23 @@ const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <button onClick={() => {
-        setIsOpen(state => !state)
-        console.log(isOpen)
-      }} className='absolute right-0 top-0 z-50 m-4 flex h-10 w-10 items-center justify-center text-white hover:bg-brand-darkGray sm:hidden'>
-        <MenuBarIcon />
-      </button>
+        <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        className='absolute right-0 top-0 text-white'>
 
-      {
-        isOpen &&
-        <motion.div
-          initial={false}
-          animate={isOpen ? 'open' : 'closed'}
-          className='absolute inset-y-0 left-0 z-40 h-screen w-full text-white'>
-
-          <motion.nav
+          <motion.div
             variants={sidebar}
-            initial='closed'
-            animate='open'
-            exit='closed'
-            className='flex h-screen flex-col items-center justify-around bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase'>
+            className='fixed right-0 top-0 z-30 flex h-screen w-full flex-col items-center justify-around bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase sm:hidden'>
             {
               links.map(link => (
                 <Link key={link.id} href={link.path}>{link.label}</Link>
               ))
-            }
-          </motion.nav>
-        </motion.div>
-      }
+              }
+          </motion.div>
+          <ToggleButton toggle={ () => { setIsOpen(state => !state) } }/>
+        </motion.nav>
+
     </>
   )
 }
