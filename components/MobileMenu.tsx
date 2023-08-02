@@ -63,6 +63,7 @@ const MobileMenu: React.FC = () => {
         <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
+        exit='closed'
         className='absolute right-0 top-0 text-white'>
 
           <motion.div
@@ -74,7 +75,7 @@ const MobileMenu: React.FC = () => {
               {
                 links.map(link => (
                   <motion.li variants={variantsItem} key={link.id}>
-                    <Link href={link.path} className='p-4 transition-all hover:tracking-[0.25em] hover:text-brand-orange'>
+                    <Link onClick={() => { setIsOpen(state => !state) }} href={link.path} className='p-4 transition-all hover:tracking-[0.25em] hover:text-brand-orange'>
                       {link.label}
                     </Link>
                   </motion.li>
