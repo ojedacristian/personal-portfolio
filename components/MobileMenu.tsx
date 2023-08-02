@@ -16,10 +16,42 @@ const sidebar = {
   closed: {
     clipPath: 'circle(24px at calc(100% - 36px) 36px )',
     transition: {
-      delay: 0.0,
+      delay: 0.5,
       type: 'spring',
       stiffness: 400,
       damping: 40
+    }
+  }
+}
+
+const variants = {
+  open: {
+    transition: {
+      staggerChildren: 0.07,
+      delayChildren: 0.5
+    }
+  },
+  closed: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1
+    }
+  }
+}
+
+const variantsItem = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
     }
   }
 }
@@ -35,12 +67,20 @@ const MobileMenu: React.FC = () => {
 
           <motion.div
             variants={sidebar}
-            className='fixed right-0 top-0 z-30 flex h-screen w-full flex-col items-center justify-around bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase sm:hidden'>
-            {
-              links.map(link => (
-                <Link key={link.id} href={link.path}>{link.label}</Link>
-              ))
+            className='fixed right-0 top-0 z-30 h-screen w-full bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase 2xl:hidden'>
+              <motion.ul
+                className='flex h-full flex-col items-center justify-around'
+              variants={variants}>
+              {
+                links.map(link => (
+                  <motion.li variants={variantsItem} key={link.id}>
+                    <Link href={link.path} className='p-4 transition-all hover:tracking-[0.25em] hover:text-brand-orange'>
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))
               }
+              </motion.ul>
           </motion.div>
           <ToggleButton toggle={ () => { setIsOpen(state => !state) } }/>
         </motion.nav>
