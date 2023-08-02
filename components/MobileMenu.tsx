@@ -63,7 +63,7 @@ const MobileMenu: React.FC = () => {
         <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        exit='closed'
+        // exit='closed'
         className='absolute right-0 top-0 text-white'>
 
           <motion.div

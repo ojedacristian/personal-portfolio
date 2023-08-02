@@ -51,7 +51,7 @@ export const NavbarMenu: React.FC<Props> = ({ dark }) => {
                     <>
                       <motion.p layoutId='number' key={link.id} className='text-4xl sm:text-6xl'>0{link.id}</motion.p>
                       <motion.div layoutId='bullet' className={`flex h-3 w-3 items-center rounded-lg ${dark ? 'bg-brand-darkGray' : 'bg-white'}`}>
-                        <motion.p layoutId='label' className='ml-8 uppercase'>{link.label}</motion.p>
+                        <motion.p className='ml-8 uppercase'>{link.label}</motion.p>
                       </motion.div>
                       <motion.div layoutId='line' className={`h-24 w-[3px] ${dark ? 'bg-brand-darkGray' : 'bg-white'}`} />
                     </>

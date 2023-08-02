@@ -1,10 +1,24 @@
 import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
 import { GithubIcon, ArrowRight } from '../../components/icons'
+import { motion } from 'framer-motion'
 
 const PortfolioPage: NextPage = () => {
   return (
     <Layout bg="bg-[url('/square2.svg')]">
+      <motion.div
+      className='mx-auto flex h-full sm:px-8'
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      initial={{ y: '100%' }}
+      animate={{ y: '0%' }}
+      exit={{ opacity: 1 }}
+      transition={{
+        duration: 0.4,
+        ease: 'easeOut'
+      }}
+      >
       <div className='container pt-20 sm:px-12 xl:px-16'>
         <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-widest'>Portfolio</h1>
 
@@ -85,6 +99,7 @@ const PortfolioPage: NextPage = () => {
         </div>
 
       </div>
+      </motion.div>
 
     </Layout>
   )

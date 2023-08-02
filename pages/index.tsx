@@ -1,11 +1,26 @@
 import { type NextPage } from 'next'
 import { ArrowRight } from '../components/icons'
 import { Layout } from '@/components/Layout'
+import { motion } from 'framer-motion'
 
 const HomePage: NextPage = () => {
   return (
     <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen overflow-hidden" >
       {/* BACKGROUND */}
+      <motion.div
+      className='mx-auto flex h-full sm:px-8'
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      initial={{ y: '100%' }}
+      animate={{ y: '0%' }}
+      exit={{ opacity: 1 }}
+      transition={{
+        duration: 0.4,
+        ease: 'easeOut'
+      }}
+      >
+
       <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden font-bold leading-[0]' id='mask'>
         <h1 className='font-montserrat text-[900px]'>V</h1>
       </div>
@@ -13,7 +28,8 @@ const HomePage: NextPage = () => {
         <h1 className='font-montserrat'>V</h1>
       </div>
       {/* BACKGROUND END */}
-      <section className='container relative z-30 flex items-center justify-center'>
+      <section
+      className='container relative z-30 flex items-center justify-center'>
         <div className='md:mr-40 lg:mr-60'>
           <h1 className='font-montserrat text-6xl font-bold uppercase tracking-widest md:text-7xl md:tracking-[.35em]'>Vanzer</h1>
           <h2 className='my-4 font-lato text-xl font-bold uppercase tracking-[0.15em] text-brand-lightGray md:text-brand-gray'>Free creative psd template for you</h2>
@@ -26,6 +42,8 @@ const HomePage: NextPage = () => {
           </div>
         </div>
       </section>
+      </motion.div>
+
     </Layout>
   )
 }

@@ -1,9 +1,23 @@
 import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
+import { easeOut, motion } from 'framer-motion'
 
 const AboutPage: NextPage = () => {
   return (
     <Layout dark>
+      <motion.div
+      className='mx-auto flex h-full sm:px-8'
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      initial={{ y: '100%' }}
+      animate={{ y: '0%' }}
+      exit={{ opacity: 1 }}
+      transition={{
+        duration: 0.4,
+        ease: 'easeOut'
+      }}
+      >
       <section
       className='container flex min-h-screen flex-col items-center justify-around pt-20'>
         <h1 className='text-center font-montserrat text-5xl font-bold uppercase tracking-widest sm:text-6xl md:text-7xl md:tracking-[0.2em]'>
@@ -21,6 +35,7 @@ const AboutPage: NextPage = () => {
       <div className='absolute right-0 top-16 -z-50 h-1/2 overflow-hidden font-montserrat text-[250px] font-bold  leading-none tracking-widest text-brand-lightGray opacity-20'>
         AB
       </div>
+      </motion.div>
     </Layout>
   )
 }
