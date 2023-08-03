@@ -1,12 +1,25 @@
 import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
 import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
+import { motion } from 'framer-motion'
 
 const ContactPage: NextPage = () => {
   return (
         <Layout bg="bg-[#efefef] min-h-screen">
             <div className="absolute inset-y-0 left-0 min-h-screen w-full bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat lg:w-1/2" />
-
+            <motion.div
+      className='mx-auto flex h-full sm:px-8'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      // initial={{ y: '100%' }}
+      // animate={{ y: '0%' }}
+      // exit={{ opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: 'easeOut'
+      }}
+      >
             <div className='container flex flex-col pt-20 lg:pr-16'>
                 <div className='relative z-10 mx-auto flex text-right lg:mx-0 lg:pr-12'>
                     <h1 className='inline-block flex-1 border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-[0.2em]'>
@@ -66,6 +79,7 @@ const ContactPage: NextPage = () => {
                 </div>
 
             </div>
+            </motion.div>
         </Layout>
   )
 }

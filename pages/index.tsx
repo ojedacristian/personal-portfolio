@@ -9,14 +9,14 @@ const HomePage: NextPage = () => {
       {/* BACKGROUND */}
       <motion.div
       className='mx-auto flex h-full sm:px-8'
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-      initial={{ y: '100%' }}
-      animate={{ y: '0%' }}
-      exit={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      // initial={{ y: '100%' }}
+      // animate={{ y: '0%' }}
+      // exit={{ opacity: 1 }}
       transition={{
-        duration: 0.4,
+        duration: 0.3,
         ease: 'easeOut'
       }}
       >

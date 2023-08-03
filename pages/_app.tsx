@@ -5,11 +5,11 @@ import { useRouter } from 'next/router'
 
 export default function App ({ Component, pageProps }: AppProps): React.ReactElement {
   const router = useRouter()
+  console.log('path', router.pathname)
   return (
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode='wait' initial={false}>
           <Component key={router.pathname} {...pageProps} />
         </AnimatePresence>
-
   )
 }
 
