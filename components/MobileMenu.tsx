@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { links } from './NavbarMenu'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ToggleButton } from './ToggleButton'
 
 const sidebar = {
@@ -59,16 +59,13 @@ const variantsItem = {
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <>
         <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        // exit='closed'
         className='absolute right-0 top-0 text-white'>
-
           <motion.div
             variants={sidebar}
-            className='fixed right-0 top-0 z-30 h-screen w-full bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase 2xl:hidden'>
+            className='fixed right-0 top-0 z-30 h-screen w-full bg-brand-darkGray p-20 font-montserrat text-3xl font-bold uppercase md:hidden'>
               <motion.ul
                 className='flex h-full flex-col items-center justify-around'
               variants={variants}>
@@ -85,8 +82,6 @@ const MobileMenu: React.FC = () => {
           </motion.div>
           <ToggleButton toggle={ () => { setIsOpen(state => !state) } }/>
         </motion.nav>
-
-    </>
   )
 }
 

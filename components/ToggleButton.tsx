@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const ToggleButton: React.FC<Props> = ({ toggle }) => (
-    <button onClick={toggle} className='fixed right-0 top-0 z-50 m-4 flex h-10 w-10 items-center justify-center stroke-brand-lightGray 2xl:hidden'>
+    <button onClick={toggle} className='fixed right-0 top-0 z-50 m-4 flex h-10 w-10 items-center justify-center stroke-brand-lightGray md:hidden'>
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
                 variants={{

@@ -7,19 +7,7 @@ const HomePage: NextPage = () => {
   return (
     <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen overflow-hidden" >
       {/* BACKGROUND */}
-      <motion.div
-      className='mx-auto flex h-full sm:px-8'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      // initial={{ y: '100%' }}
-      // animate={{ y: '0%' }}
-      // exit={{ opacity: 1 }}
-      transition={{
-        duration: 0.3,
-        ease: 'easeOut'
-      }}
-      >
+      <div className='mx-auto flex h-full sm:px-8'>
 
       <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden font-bold leading-[0]' id='mask'>
         <h1 className='font-montserrat text-[900px]'>V</h1>
@@ -42,7 +30,7 @@ const HomePage: NextPage = () => {
           </div>
         </div>
       </section>
-      </motion.div>
+      </div>
 
     </Layout>
   )

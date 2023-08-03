@@ -41,7 +41,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       <main
         className={`${lato.variable} ${montserrat.variable} relative ${dark ? 'text-brand-darkGray' : 'text-white'} ${bg} flex min-h-screen justify-between`}
       >
-        <aside className='hidden h-screen flex-col items-center pl-2 sm:flex sm:pl-0'>
+        <aside className='hidden h-screen flex-col items-center pl-2 sm:pl-0 md:flex'>
           <header className='relative z-10 flex w-full justify-between pt-10 sm:px-10'>
             <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
           </header>
