@@ -8,14 +8,14 @@ const AboutPage: NextPage = () => {
       >
         <section
           className='container flex min-h-screen flex-col items-center justify-around'>
-          <h1 className='text-center font-montserrat text-5xl font-bold uppercase tracking-widest sm:text-6xl md:text-7xl md:tracking-[0.2em]'>
+          <h1 className='text-center font-montserrat text-5xl font-bold uppercase tracking-widest md:text-6xl md:tracking-[0.2em] lg:text-7xl '>
             <span className='text-brand-orange'>Multimedia </span>Developer
           </h1>
-          <h2 className='w-5/6 text-center text-xl text-brand-darkGray [&>span]:text-brand-orange'>
+          <h2 className='w-5/6 px-2 text-center text-xl text-brand-darkGray [&>span]:text-brand-orange'>
             Mi nombre es <span>Cristian Ojeda</span> y soy un <span>profesional independiente</span> focalizado
             en la construcción de <span>experiencias multimedia</span>.
           </h2>
-          <div className='w-full px-4 md:w-3/4 xl:w-1/2'>
+          <div className='w-full px-4 lg:w-3/4 2xl:w-1/2'>
             <span className='mb-4 block h-1 w-64 bg-brand-lightGray md:w-96' />
             <p className='font-lato text-sm leading-7 text-[#999]'>
               Diseño y trabajo en el desarrollo de productos digitales y soluciones de comunicación gracias a un perfil multidisciplinario. Soy Licenciado en Tecnología Multimedia, lo que me llevo a gestionar proyectos en campos diversos como el diseño gráfico, web, interactivo, programación, análisis de datos y marketing digital.
@@ -23,7 +23,7 @@ const AboutPage: NextPage = () => {
           </div>
         </section>
         {/* BACKGROUND */}
-        <div className='absolute left-0 top-36 -z-50 h-screen overflow-hidden font-montserrat text-[500px] font-bold leading-none text-brand-lightGray opacity-30 sm:text-[600px] md:-left-44 md:-top-0 md:text-[1000px]'>
+        <div className='absolute left-0 top-36 -z-50 hidden overflow-hidden font-montserrat text-[500px] font-bold leading-none text-brand-lightGray opacity-30 sm:block sm:text-[600px] md:-left-0 md:-top-0 md:text-[800px]'>
         S
       </div>
         <div className='absolute right-0 top-1/2 -z-50 overflow-hidden font-montserrat text-[200px] font-bold  leading-none tracking-widest text-brand-lightGray opacity-20'>

@@ -1,7 +1,6 @@
 import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
 import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
-import { motion } from 'framer-motion'
 
 const ContactPage: NextPage = () => {
   return (
@@ -17,29 +16,36 @@ const ContactPage: NextPage = () => {
                 </div>
                 <div className="flex w-full flex-col justify-center gap-16 pt-8 md:flex-row lg:gap-40">
                     <div className='relative z-10 text-right lg:flex-1'>
-                        <div className='flex items-end justify-around gap-14 fill-brand-gray pt-24 text-brand-gray md:flex-col'>
+                        <div className='flex items-end justify-around gap-14 fill-brand-gray pt-4 text-brand-gray md:flex-col md:pt-24'>
                             <div className='flex items-center gap-7 font-lato'>
                                 <div className='hidden md:block'>
                                     <span className='block font-montserrat text-lg font-bold uppercase'>E-mail</span>
                                     <a href='mailto:cristianojeda.maimo@gmail.com' className='text-sm'>cristianojeda.maimo@gmail.com </a>
                                 </div>
+                                <a href='mailto:cristianojeda.maimo@gmail.com' className='transition-all hover:scale-150 hover:text-brand-orange'>
                                 <MailIcon />
+                               </a>
                             </div>
                             <div className='flex items-center gap-7 font-lato'>
                                 <div className='hidden md:block'>
                                     <span className='block font-montserrat text-lg font-bold uppercase'>Github</span>
                                     <a href='https://github.com/ojedacristian' target='_blank' className='text-sm' rel="noreferrer">github.com/ojedacristian </a>
                                 </div>
+                               <a href='https://github.com/ojedacristian' target='_blank' className='transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                                 <GithubIcon />
+                               </a>
                             </div>
                             <div className='flex items-center gap-7 font-lato'>
                                 <div className='hidden md:block'>
                                     <span className='block font-montserrat text-lg font-bold uppercase'>Linkedin</span>
                                     <a href='https://www.linkedin.com/in/ojedacristian/' target='_blank' className='text-sm' rel="noreferrer">linkedin.com/in/ojedacristian </a>
                                 </div>
+                                <a href='https://www.linkedin.com/in/ojedacristian/' target='_blank' className='text-sm transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                                 <LinkedinIcon />
+                                </a>
                             </div>
                         </div>
+                        {/* <div className='pt-8 text-center'>cristianojeda.maimo@gmail.com</div> */}
                     </div>
                     <div className='relative z-10 flex-1 text-black'>
                         <form className='flex flex-col gap-8 pb-4 font-lato text-brand-lightGray lg:text-brand-darkGray

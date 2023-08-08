@@ -8,10 +8,10 @@ const HomePage: NextPage = () => {
     <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen overflow-hidden" >
       {/* BACKGROUND */}
       <div className='mx-auto flex h-full px-8'>
-      <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden font-bold leading-[0]' id='mask'>
-        <h1 className='font-montserrat text-[600px]'>js</h1>
+      <div className='absolute left-2/3 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[400px] font-bold leading-[0] md:text-[600px]' id='mask'>
+        <h1 className='font-montserrat'>js</h1>
       </div>
-      <div className='absolute left-2/3 top-1/2 z-20 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[600px] font-bold leading-[0] text-brand-orange opacity-50'>
+      <div className='absolute left-2/3 top-1/2 z-20 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[400px] font-bold leading-[0] text-brand-orange opacity-50 md:text-[600px]'>
         <h1 className='font-montserrat'>js</h1>
       </div>
       {/* BACKGROUND END */}
