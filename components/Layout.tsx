@@ -43,7 +43,7 @@ export const Layout: React.FC<Props> = ({ children, title = 'Cristian Ojeda - Po
       >
         <aside className='hidden h-screen flex-col items-center pl-2 sm:pl-0 md:flex'>
           <header className='relative z-10 flex w-full justify-between pt-10 sm:px-10'>
-            <Link href='/' className='text-5xl font-bold uppercase'>vz</Link>
+            <Link href='/' className='text-4xl font-bold'>CO</Link>
           </header>
           <NavbarMenu dark={dark} />
         </aside>

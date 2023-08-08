@@ -17,7 +17,7 @@ export const links: LinksNav[] = [
     id: '1'
   },
   {
-    label: 'About me',
+    label: 'Sobre mi',
     path: '/about',
     id: '2'
 
@@ -28,7 +28,7 @@ export const links: LinksNav[] = [
     id: '3'
   },
   {
-    label: 'Contact',
+    label: 'Contacto',
     path: '/contact',
     id: '4'
   }
