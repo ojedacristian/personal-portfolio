@@ -20,6 +20,19 @@ module.exports = {
         lato: ['var(--font-lato)']
       }
     },
+    animation: {
+      bounce: 'bounce 1.5s infinite'
+    },
+    keyframes: {
+      bounce: {
+        '0%, 100%': {
+          transform: 'translateX(25%)',
+        },
+        '50%': {
+          transform: 'translateX(0)'
+        }
+      }
+    }
   },
   plugins: [],
 }
