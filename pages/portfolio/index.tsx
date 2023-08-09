@@ -2,91 +2,98 @@ import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
 import { GithubIcon, ArrowRight } from '../../components/icons'
 import { motion } from 'framer-motion'
+import { PortfolioCard, type PortfolioCardProps } from '../../components/PortfolioCard'
+import { customVariant, customVariantItem } from '@/components/animations'
+
+const projects: PortfolioCardProps[] = [
+  {
+    img: '1.jpg',
+    desc: 'Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga ',
+    github: 'https://github.com',
+    live: 'https://urkupinaonline.com.ar',
+    title: 'Urkupiña online'
+  },
+  {
+    img: '1.jpg',
+    desc: 'Descripcion',
+    github: 'github.com',
+    live: 'google.com',
+    title: 'Urkupiña online'
+  },
+  {
+    img: '1.jpg',
+    desc: 'Descripcion',
+    github: 'github.com',
+    live: 'google.com',
+    title: 'Urkupiña online'
+  },
+  {
+    img: '1.jpg',
+    desc: 'Descripcion',
+    github: 'github.com',
+    live: 'google.com',
+    title: 'Urkupiña online'
+  }
+]
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.4
+      // staggerDirection: -1
+    }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+}
 
 const PortfolioPage: NextPage = () => {
   return (
     <Layout bg="bg-[url('/square2.svg')]">
-      <div className='mx-auto flex h-full sm:px-8'>
-      <div className='container pt-20 sm:px-12 xl:px-16'>
-        <h1 className='inline-block border-b-4 border-brand-orange pb-4 font-montserrat text-5xl font-bold uppercase tracking-widest'>Portfolio</h1>
+      <div className='mx-auto flex h-full'>
+      <motion.div variants={customVariant} initial='hidden' animate='show' className='container pt-20'>
+        <motion.h1 variants={customVariantItem} className='inline-block font-montserrat text-5xl font-bold uppercase tracking-widest'>
+          Portfolio
+        <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{
+                scaleX: 1,
+                transition: {
+                  ease: 'easeOut',
+                  duration: 1,
+                  delay: 0.3
+                }
+              }}
+              className='mb-7 mt-3 block h-1 w-full origin-left bg-brand-orange' />
+          </motion.h1>
 
-        <div className='grid gap-6 px-4 lg:grid-cols-2 2xl:grid-cols-3'>
-          <figure className="group relative mt-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
-            <img src="1.jpg" alt="img01" className='min-h-full min-w-full group-hover:opacity-60' />
-            <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100
-            '>
-              <div className='absolute bottom-0 right-0 flex gap-4 p-4'>
-                <div className='-translate-x-4 opacity-0 transition delay-[400ms] group-hover:translate-x-0 group-hover:opacity-100'>
-                  <GithubIcon />
-                </div>
-                <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
-                  <ArrowRight />
-                </div>
-              </div>
-            </figcaption>
-            <p className='invisible absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-6 font-lato font-bold  opacity-0 transition-all duration-500 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>Descripcion del proyecto de Urkupiña</p>
-            <h2 className='absolute bottom-0 left-0 p-4 text-base font-bold uppercase transition-all group-hover:text-brand-darkGray'>
-              Urkupiña <span>Online</span>
-            </h2>
-          </figure>
-          <figure className="group relative mt-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
-            <img src="project3.png" alt="img01" className='min-h-full min-w-full group-hover:opacity-50' />
-            <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100
-            '>
-              <div className='absolute bottom-0 right-0 flex gap-4 p-4'>
-                <div className='-translate-x-4 opacity-0 transition delay-[400ms] group-hover:translate-x-0 group-hover:opacity-100'>
-                  <GithubIcon />
-                </div>
-                <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
-                  <ArrowRight />
-                </div>
-              </div>
-            </figcaption>
-            <p className='invisible absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-6 font-lato font-bold  opacity-0 transition-all duration-500 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>Descripcion del proyecto de Urkupiña</p>
-            <h2 className='absolute bottom-0 left-0 p-4 text-base font-bold uppercase transition-all group-hover:text-brand-darkGray'>
-              Urkupiña <span>Online</span>
-            </h2>
-          </figure>
+        <motion.div
+        variants={container}
+        className='grid gap-6 px-4 xl:grid-cols-2'>
 
-          <figure className="group relative mt-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
-            <img src="1.jpg" alt="img01" className='min-h-full min-w-full group-hover:opacity-60' />
-            <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100
-            '>
-              <div className='absolute bottom-0 right-0 flex gap-4 p-4'>
-                <div className='-translate-x-4 opacity-0 transition delay-[400ms] group-hover:translate-x-0 group-hover:opacity-100'>
-                  <GithubIcon />
-                </div>
-                <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
-                  <ArrowRight />
-                </div>
-              </div>
-            </figcaption>
-            <p className='invisible absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-6 font-lato font-bold  opacity-0 transition-all duration-500 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>Descripcion del proyecto de Urkupiña</p>
-            <h2 className='absolute bottom-0 left-0 p-4 text-base font-bold uppercase transition-all group-hover:text-brand-darkGray'>
-              Urkupiña <span>Online</span>
-            </h2>
-          </figure>
-          <figure className="group relative mt-6 overflow-hidden rounded-2xl bg-brand-orange text-white hover:cursor-pointer">
-            <img src="project3.png" alt="img01" className='min-h-full min-w-full group-hover:opacity-50' />
-            <figcaption className='invisible absolute bottom-0 w-full -translate-x-1/2 scale-x-0 bg-white p-8 uppercase text-[#3c4a50] transition-all duration-300 before:pointer-events-none after:pointer-events-none group-hover:visible group-hover:translate-x-0 group-hover:scale-100
-            '>
-              <div className='absolute bottom-0 right-0 flex gap-4 p-4'>
-                <div className='-translate-x-4 opacity-0 transition delay-[400ms] group-hover:translate-x-0 group-hover:opacity-100'>
-                  <GithubIcon />
-                </div>
-                <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
-                  <ArrowRight />
-                </div>
-              </div>
-            </figcaption>
-            <p className='invisible absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-6 font-lato font-bold  opacity-0 transition-all duration-500 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>Descripcion del proyecto de Urkupiña</p>
-            <h2 className='absolute bottom-0 left-0 p-4 text-base font-bold uppercase transition-all group-hover:text-brand-darkGray'>
-              Urkupiña <span>Online</span>
-            </h2>
-          </figure>
-        </div>
+          {
+            projects.map(({ desc, img, github, live, title }) => (
+              <motion.div key={ title } variants={item}>
+                <PortfolioCard
+                img={ img }
+                title={ title }
+                desc={ desc }
+                github={ github }
+                live={ live }
+                />
+              </motion.div>
+            ))
+          }
 
-      </div>
+        </motion.div>
+
+      </motion.div>
       </div>
 
     </Layout>
