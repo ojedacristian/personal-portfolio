@@ -1,9 +1,8 @@
 import { Layout } from '@/components/Layout'
 import { type NextPage } from 'next'
-import { GithubIcon, ArrowRight } from '../../components/icons'
 import { motion } from 'framer-motion'
 import { PortfolioCard, type PortfolioCardProps } from '../../components/PortfolioCard'
-import { customVariant, customVariantItem } from '@/components/animations'
+import { container, customVariant, customVariantItem, item } from '@/components/animations'
 
 const projects: PortfolioCardProps[] = [
   {
@@ -35,23 +34,6 @@ const projects: PortfolioCardProps[] = [
     title: 'Urkupiña online'
   }
 ]
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.4
-      // staggerDirection: -1
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-}
 
 const PortfolioPage: NextPage = () => {
   return (
