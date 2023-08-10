@@ -6,32 +6,32 @@ import { container, customVariant, customVariantItem, item } from '@/components/
 
 const projects: PortfolioCardProps[] = [
   {
-    img: '1.jpg',
+    img: 'uxdesigner.jpg',
+    desc: 'Descripcion',
+    github: 'github.com',
+    live: 'google.com',
+    title: 'UX Designer site'
+  },
+  {
+    img: 'dezign.jpg',
+    desc: 'Portfolio open source construido con Nextjs, React, Typescript',
+    github: 'github.com',
+    live: 'google.com',
+    title: 'Open Source Portfolio'
+  },
+  {
+    img: 'urkupinaonline.jpg',
     desc: 'Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga ',
     github: 'https://github.com',
     live: 'https://urkupinaonline.com.ar',
     title: 'Urkupiña online'
   },
   {
-    img: '1.jpg',
-    desc: 'Descripcion',
+    img: 'mapacdi.jpg',
+    desc: 'Se articuló con el Ministerio de Desarrollo Social e Innovación Pública para el desarrollo de un Mapa Interactivo con los diferentes centros dependientes del Ministerio. ',
     github: 'github.com',
     live: 'google.com',
-    title: 'Urkupiña online'
-  },
-  {
-    img: '1.jpg',
-    desc: 'Descripcion',
-    github: 'github.com',
-    live: 'google.com',
-    title: 'Urkupiña online'
-  },
-  {
-    img: '1.jpg',
-    desc: 'Descripcion',
-    github: 'github.com',
-    live: 'google.com',
-    title: 'Urkupiña online'
+    title: 'Mapa Interactivo'
   }
 ]
 
@@ -54,11 +54,9 @@ const PortfolioPage: NextPage = () => {
               }}
               className='mb-7 mt-3 block h-1 w-full origin-left bg-brand-orange' />
           </motion.h1>
-
         <motion.div
         variants={container}
-        className='grid gap-6 px-4 xl:grid-cols-2'>
-
+        className='grid gap-6 px-4 pb-10 xl:grid-cols-2'>
           {
             projects.map(({ desc, img, github, live, title }) => (
               <motion.div key={ title } variants={item}>
@@ -72,12 +70,9 @@ const PortfolioPage: NextPage = () => {
               </motion.div>
             ))
           }
-
         </motion.div>
-
       </motion.div>
       </div>
-
     </Layout>
   )
 }
