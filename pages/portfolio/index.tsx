@@ -10,28 +10,32 @@ const projects: PortfolioCardProps[] = [
     desc: 'Descripcion',
     github: 'github.com',
     live: 'google.com',
-    title: 'UX Designer site'
+    title: 'UX Designer site',
+    stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
   {
     img: 'dezign.jpg',
     desc: 'Portfolio open source construido con Nextjs, React, Typescript',
     github: 'github.com',
     live: 'google.com',
-    title: 'Open Source Portfolio'
+    title: 'Open Source Portfolio',
+    stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
   {
     img: 'urkupinaonline.jpg',
-    desc: 'Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga Descripcion algo larga ',
+    desc: 'Plataforma web para los comerciantes de Urkupiña, el paseo de compras más grande de la Feria La Salada.',
     github: 'https://github.com',
     live: 'https://urkupinaonline.com.ar',
-    title: 'Urkupiña online'
+    title: 'Urkupiña online',
+    stack: ['ReactJS', 'MongoDB', 'Amazon S3', 'Amazon SES', 'AWS Elastic Beanstalk', 'Framer Motion', 'MaterializeCSS']
   },
   {
     img: 'mapacdi.jpg',
-    desc: 'Se articuló con el Ministerio de Desarrollo Social e Innovación Pública para el desarrollo de un Mapa Interactivo con los diferentes centros dependientes del Ministerio. ',
+    desc: 'Articulación con el Ministerio de Desarrollo Social y el Ministerio de Modernización para el desarrollo de un Mapa Interactivo con los diferentes Centros dependientes del Ministerio.',
     github: 'github.com',
     live: 'google.com',
-    title: 'Mapa Interactivo'
+    title: 'Mapa Interactivo',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Leaflet']
   }
 ]
 
@@ -58,7 +62,7 @@ const PortfolioPage: NextPage = () => {
         variants={container}
         className='grid gap-6 px-4 pb-10 xl:grid-cols-2'>
           {
-            projects.map(({ desc, img, github, live, title }) => (
+            projects.map(({ desc, img, github, live, title, stack }) => (
               <motion.div key={ title } variants={item}>
                 <PortfolioCard
                 img={ img }
@@ -66,6 +70,7 @@ const PortfolioPage: NextPage = () => {
                 desc={ desc }
                 github={ github }
                 live={ live }
+                stack={ stack }
                 />
               </motion.div>
             ))
