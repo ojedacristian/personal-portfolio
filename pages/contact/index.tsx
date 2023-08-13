@@ -3,8 +3,33 @@ import { type NextPage } from 'next'
 import { GithubIcon, LinkedinIcon, MailIcon } from '../../components/icons'
 import { motion } from 'framer-motion'
 import { customVariant, customVariantItem, customVariantItemX } from '@/components/animations'
+import { type FormEvent } from 'react'
+import { useForm } from '@/components/hooks/useForm'
 
 const ContactPage: NextPage = () => {
+  const [values, handleInputChange, reset] = useForm({
+    name: '',
+    email: '',
+    phone: 0,
+    message: ''
+  })
+  const handleSubmit = (e: FormEvent): void => {
+    e.preventDefault()
+    console.log(values)
+
+    fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(values)
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log('Enviado OK')
+          reset()
+        } else {
+          console.log('Hubo un Error')
+        }
+      }).catch(err => { console.log(err) })
+  }
   return (
         <Layout bg="bg-[#efefef] min-h-screen">
             <div className="absolute inset-y-0 left-0 min-h-screen w-full bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat lg:w-1/2" />
@@ -62,24 +87,26 @@ const ContactPage: NextPage = () => {
                             {/* <div className='pt-8 text-center'>cristianojeda.maimo@gmail.com</div> */}
                         </motion.div>
                         <motion.div variants={customVariantItemX} custom={[1.5, 20]} className='relative z-10 flex-1 text-black'>
-                            <form className='flex flex-col gap-8 pb-4 font-lato text-brand-lightGray lg:text-brand-darkGray
+                            <form
+                            onSubmit={handleSubmit}
+                            className='flex flex-col gap-8 pb-4 font-lato text-brand-lightGray lg:text-brand-darkGray
                         [&>div>input]:font-montserrat [&>div>input]:text-brand-darkGray
                          [&>div>textarea]:font-montserrat [&>div>textarea]:text-brand-darkGray'>
                                 <div>
-                                    <label htmlFor="name" className='block font-bold uppercase'>Name</label>
-                                    <input type="text" placeholder='Your name' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <label htmlFor="name" className='block font-bold uppercase'>Nombre</label>
+                                    <input type="text" name='name' onChange={handleInputChange} placeholder='Tu nombre' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className='block font-bold uppercase'>Email</label>
-                                    <input type="text" placeholder='email@gmail.com' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <input type="text" onChange={handleInputChange} name='email' placeholder='email@gmail.com' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
-                                    <label htmlFor="phone" className='block font-bold uppercase'>phone</label>
-                                    <input type="text" placeholder='Your name' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <label htmlFor="phone" className='block font-bold uppercase'>Telefono</label>
+                                    <input type="text" onChange={handleInputChange} name='phone' placeholder='Celular' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className='block font-bold uppercase'>Message</label>
-                                    <textarea placeholder='Your message' className='mt-1 block h-28 w-full resize-none rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400  focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <label htmlFor="message" className='block font-bold uppercase'>Mensaje</label>
+                                    <textarea placeholder='Dejame tu mensaje' onChange={handleInputChange} name='message' className='mt-1 block h-28 w-full resize-none rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400  focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <button className='w-1/2 bg-brand-orange p-3 text-sm font-bold uppercase text-white'>Enviar</button>
                             </form>
