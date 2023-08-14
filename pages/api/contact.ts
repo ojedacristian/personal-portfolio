@@ -5,6 +5,7 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
 
   const { name, email, message, phone } = JSON.parse(req.body)
 
+  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (!name || !email || !message || !phone) {
     res.status(400).json({ message: 'Todos los campos son requeridos' }); return
   }

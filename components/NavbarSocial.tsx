@@ -9,11 +9,11 @@ const NavbarSocial: React.FC = () => {
             <a href='mailto:cristianojeda.maimo@gmail.com' className='text-brand-gray transition ease-in-out hover:scale-150 hover:text-brand-orange'>
                 <MailIcon />
             </a>
-            <a href='github.com' target='_blank' className='fill-brand-gray transition ease-in-out hover:scale-150 hover:fill-brand-orange'>
+            <a href='https://github.com/ojedacristian' target='_blank' className='fill-brand-gray transition ease-in-out hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                 <GithubIcon />
             </a>
             {/* <WhatsappIcon /> */}
-            <a href='linkedin.com' className='fill-brand-gray text-brand-gray transition ease-in-out hover:scale-150 hover:fill-brand-orange'>
+            <a href='https://www.linkedin.com/in/ojedacristian' target='_blank' className='fill-brand-gray text-brand-gray transition ease-in-out hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                 <LinkedinIcon />
             </a>
         </nav>

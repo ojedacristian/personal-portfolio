@@ -7,24 +7,24 @@ import { container, customVariant, customVariantItem, item } from '@/components/
 const projects: PortfolioCardProps[] = [
   {
     img: 'uxdesigner.jpg',
-    desc: 'Descripcion',
-    github: 'github.com',
+    desc: 'UX/UI Designer Portfolio. Sitio web de código abierto responsive, de fácil personalización.',
+    github: 'https://github.com/ojedacristian/designer-free-portfolio',
     live: 'google.com',
-    title: 'UX Designer site',
+    title: 'UX/UI Designer site',
     stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
   {
     img: 'dezign.jpg',
-    desc: 'Portfolio open source construido con Nextjs, React, Typescript',
-    github: 'github.com',
+    desc: 'Portfolio open source construido para la comunidad. Diseño de una página, responsive, minimalista.',
+    github: 'https://github.com/ojedacristian/next-tailwind-portfolio',
     live: 'google.com',
-    title: 'Open Source Portfolio',
+    title: 'Portfolio Open Source',
     stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
   {
     img: 'urkupinaonline.jpg',
     desc: 'Plataforma web para los comerciantes de Urkupiña, el paseo de compras más grande de la Feria La Salada.',
-    github: 'https://github.com',
+    github: '',
     live: 'https://urkupinaonline.com.ar',
     title: 'Urkupiña online',
     stack: ['ReactJS', 'MongoDB', 'Amazon S3', 'Amazon SES', 'AWS Elastic Beanstalk', 'Framer Motion', 'MaterializeCSS']
@@ -32,8 +32,8 @@ const projects: PortfolioCardProps[] = [
   {
     img: 'mapacdi.jpg',
     desc: 'Articulación con el Ministerio de Desarrollo Social y el Ministerio de Modernización para el desarrollo de un Mapa Interactivo con los diferentes Centros dependientes del Ministerio.',
-    github: 'github.com',
-    live: 'google.com',
+    github: 'https://github.com',
+    live: 'https://google.com',
     title: 'Mapa Interactivo',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Leaflet']
   }
