@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { links } from './NavbarMenu'
 import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ToggleButton } from './ToggleButton'
 
 const sidebar = {

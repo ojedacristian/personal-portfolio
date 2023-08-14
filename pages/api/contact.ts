@@ -12,7 +12,7 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
 
   const nameRegex = /^[a-zA-Z\s]+$/
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const messageRegex = /^[a-zA-Z0-9\s!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/
+  const messageRegex = /^[a-zA-Z0-9\s!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+$/
 
   if (!nameRegex.test(name)) {
     res.status(400).json({ message: 'Campo name: Formato inválido' }); return

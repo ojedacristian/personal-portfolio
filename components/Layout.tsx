@@ -1,6 +1,5 @@
 'use client'
 import Head from 'next/head'
-import { GithubIcon, LinkedinIcon, MailIcon, MenuBarIcon } from './icons'
 import { Montserrat, Lato } from 'next/font/google'
 import Link from 'next/link'
 import { NavbarMenu } from './NavbarMenu'
