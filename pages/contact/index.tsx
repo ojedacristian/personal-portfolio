@@ -10,12 +10,15 @@ const ContactPage: NextPage = () => {
   const [values, handleInputChange, reset] = useForm({
     name: '',
     email: '',
-    phone: 0,
+    phone: '',
     message: ''
   })
+
+  const { name, email, phone, message } = values
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault()
     console.log(values)
+    reset()
 
     fetch('/api/contact', {
       method: 'POST',
@@ -94,19 +97,19 @@ const ContactPage: NextPage = () => {
                          [&>div>textarea]:font-montserrat [&>div>textarea]:text-brand-darkGray'>
                                 <div>
                                     <label htmlFor="name" className='block font-bold uppercase'>Nombre</label>
-                                    <input type="text" name='name' onChange={handleInputChange} placeholder='Tu nombre' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <input type="text" name='name' value={name} onChange={handleInputChange} placeholder='Tu nombre' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className='block font-bold uppercase'>Email</label>
-                                    <input type="text" onChange={handleInputChange} name='email' placeholder='email@gmail.com' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <input type="text" onChange={handleInputChange} value={email} name='email' placeholder='email@gmail.com' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
                                     <label htmlFor="phone" className='block font-bold uppercase'>Telefono</label>
-                                    <input type="text" onChange={handleInputChange} name='phone' placeholder='Celular' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <input type="text" onChange={handleInputChange} value={phone} name='phone' placeholder='Celular' className='mt-1 block w-full rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:border-brand-orange  focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <div>
                                     <label htmlFor="message" className='block font-bold uppercase'>Mensaje</label>
-                                    <textarea placeholder='Dejame tu mensaje' onChange={handleInputChange} name='message' className='mt-1 block h-28 w-full resize-none rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400  focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
+                                    <textarea placeholder='Dejame tu mensaje' value={message} onChange={handleInputChange} name='message' className='mt-1 block h-28 w-full resize-none rounded-md border border-brand-gray px-3 py-2 text-sm shadow-sm placeholder:text-slate-400  focus:border-brand-orange focus:outline-none focus:ring-1 focus:ring-brand-orange lg:w-full' />
                                 </div>
                                 <button className='w-1/2 bg-brand-orange p-3 text-sm font-bold uppercase text-white'>Enviar</button>
                             </form>

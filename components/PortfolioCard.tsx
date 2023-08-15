@@ -43,11 +43,14 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, desc, githu
                             </a>
                         </div>
                     }
-                    <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
-                        <a href={live} target='_blank' rel="noreferrer">
-                            <ArrowRight />
-                        </a>
-                    </div>
+                    {
+                        live.length !== 0 &&
+                        <div className='-translate-x-4 opacity-0 transition delay-500 group-hover:translate-x-0 group-hover:opacity-100'>
+                            <a href={live} target='_blank' rel="noreferrer">
+                                <ArrowRight />
+                            </a>
+                        </div>
+                    }
                 </div>
             </figcaption>
 

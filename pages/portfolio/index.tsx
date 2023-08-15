@@ -9,7 +9,7 @@ const projects: PortfolioCardProps[] = [
     img: 'uxdesigner.jpg',
     desc: 'UX/UI Designer Portfolio. Sitio web de código abierto responsive, de fácil personalización.',
     github: 'https://github.com/ojedacristian/designer-free-portfolio',
-    live: 'google.com',
+    live: 'https://free-uxdesigner-portfolio.netlify.app/',
     title: 'UX/UI Designer site',
     stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
@@ -17,7 +17,7 @@ const projects: PortfolioCardProps[] = [
     img: 'dezign.jpg',
     desc: 'Portfolio open source construido para la comunidad. Diseño de una página, responsive, minimalista.',
     github: 'https://github.com/ojedacristian/next-tailwind-portfolio',
-    live: 'google.com',
+    live: 'https://free-next-portfolio.netlify.app/',
     title: 'Portfolio Open Source',
     stack: ['NextJS', 'Tailwind', 'TypeScript', 'Framer Motion']
   },
@@ -32,9 +32,9 @@ const projects: PortfolioCardProps[] = [
   {
     img: 'mapacdi.jpg',
     desc: 'Articulación con el Ministerio de Desarrollo Social y el Ministerio de Modernización para el desarrollo de un Mapa Interactivo con los diferentes Centros dependientes del Ministerio.',
-    github: 'https://github.com',
-    live: 'https://google.com',
-    title: 'Mapa Interactivo',
+    github: 'https://github.com/ojedacristian/leaflet-cdis-search',
+    live: '',
+    title: 'Mapa Interactivo de CDIs',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Leaflet']
   }
 ]
