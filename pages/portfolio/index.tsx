@@ -33,7 +33,7 @@ const projects: PortfolioCardProps[] = [
     img: 'mapacdi.jpg',
     desc: 'Articulación con el Ministerio de Desarrollo Social y el Ministerio de Modernización para el desarrollo de un Mapa Interactivo con los diferentes Centros dependientes del Ministerio.',
     github: 'https://github.com/ojedacristian/leaflet-cdis-search',
-    live: '',
+    live: 'https://mapa-cdis.netlify.app/',
     title: 'Mapa Interactivo de CDIs',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Leaflet']
   }
