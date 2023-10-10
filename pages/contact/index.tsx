@@ -57,7 +57,7 @@ const ContactPage: NextPage = () => {
                         <div className='flex-1'></div>
                     </div>
                     <div className="flex w-full flex-col justify-center gap-16 pt-8 md:flex-row lg:gap-40">
-                        <motion.div variants={customVariantItemX} custom={[1.5, -20]} className='relative z-10 text-right lg:flex-1'>
+                        <motion.div id='left' variants={customVariantItemX} custom={[1.5, -20]} className='relative z-10 text-right lg:flex-1'>
                             <div className='flex items-end justify-around gap-14 fill-brand-gray pt-4 text-brand-gray md:flex-col md:pt-24'>
                                 <div className='flex items-center gap-7 font-lato'>
                                     <div className='hidden md:block'>
@@ -89,7 +89,7 @@ const ContactPage: NextPage = () => {
                             </div>
                             {/* <div className='pt-8 text-center'>cristianojeda.maimo@gmail.com</div> */}
                         </motion.div>
-                        <motion.div variants={customVariantItemX} custom={[1.5, 20]} className='relative z-10 flex-1 text-black'>
+                        <motion.div id='right' variants={customVariantItemX} custom={[1.5, 20]} className='relative z-10 flex-1 text-black'>
                             <form
                             onSubmit={handleSubmit}
                             className='flex flex-col gap-8 pb-4 font-lato text-brand-lightGray lg:text-brand-darkGray
