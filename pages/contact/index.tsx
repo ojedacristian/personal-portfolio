@@ -73,7 +73,7 @@ const ContactPage: NextPage = () => {
                                         <span className='block font-montserrat text-lg font-bold uppercase'>Github</span>
                                         <a href='https://github.com/ojedacristian' target='_blank' className='text-sm' rel="noreferrer">github.com/ojedacristian </a>
                                     </div>
-                                    <a href='https://github.com/ojedacristian' target='_blank' className='transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
+                                    <a href='https://github.com/ojedacristian' target='_blank' className='fill-brand-gray transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                                         <GithubIcon />
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@ const ContactPage: NextPage = () => {
                                         <span className='block font-montserrat text-lg font-bold uppercase'>Linkedin</span>
                                         <a href='https://www.linkedin.com/in/ojedacristian/' target='_blank' className='text-sm' rel="noreferrer">linkedin.com/in/ojedacristian </a>
                                     </div>
-                                    <a href='https://www.linkedin.com/in/ojedacristian/' target='_blank' className='text-sm transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
+                                    <a href='https://www.linkedin.com/in/ojedacristian/' target='_blank' className='fill-brand-gray text-sm transition-all hover:scale-150 hover:fill-brand-orange' rel="noreferrer">
                                         <LinkedinIcon />
                                     </a>
                                 </div>

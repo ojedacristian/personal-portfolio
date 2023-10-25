@@ -10,23 +10,6 @@ const HomePage: NextPage = () => {
     <Layout bg="bg-[url('/homebg2.jpg')] bg-cover bg-no-repeat h-screen overflow-hidden" >
       {/* BACKGROUND */}
       <div className='mx-auto flex h-full px-8'>
-        <div className='absolute left-3/4 top-1/2 z-10 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[400px] font-bold leading-[0] md:text-[600px]' id='mask'>
-          <motion.h1
-            initial={{
-              opacity: 0, x: -250
-            }} animate={{
-              opacity: 1, x: 0, transition: { duration: 1, delay: 0.8 }
-            }}
-            className='font-montserrat'>js</motion.h1>
-        </div>
-        <div className='absolute left-3/4 top-1/2 z-20 flex h-full -translate-x-1/2 -translate-y-1/2 items-center overflow-hidden text-[400px] font-bold leading-[0] text-brand-orange opacity-50 md:text-[600px]'>
-          <motion.h1
-            initial={{
-              opacity: 0,
-              scale: 1
-            }} animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
-            className='font-montserrat'>js</motion.h1>
-        </div>
         {/* BACKGROUND END */}
         <motion.section
           variants={customVariant}
